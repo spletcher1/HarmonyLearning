@@ -27,6 +27,8 @@
 #include <stdlib.h>                     // Defines EXIT_FAILURE
 #include "definitions.h"                // SYS function prototypes
 
+// Tutorial here
+// https://microchipdeveloper.com/harmony3:pic32mz-get-start-tm-drvr-middlware-freertos
 
 // *****************************************************************************
 // *****************************************************************************
@@ -34,11 +36,18 @@
 // *****************************************************************************
 // *****************************************************************************
 
+void Initialize(){   
+    RedRGBLED_Set();
+    BlueRGBLED_Set();
+    GreenRGBLED_Set();
+}
+
+
 int main ( void )
 {
     /* Initialize all modules */
     SYS_Initialize ( NULL );
-
+    Initialize();
     while ( true )
     {
         /* Maintain state machines of all polled MPLAB Harmony modules. */

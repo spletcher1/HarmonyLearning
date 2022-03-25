@@ -62,6 +62,60 @@
 // *****************************************************************************
 
 
+/*** Macros for YellowLED pin ***/
+#define YellowLED_Set()               (LATESET = (1<<6))
+#define YellowLED_Clear()             (LATECLR = (1<<6))
+#define YellowLED_Toggle()            (LATEINV= (1<<6))
+#define YellowLED_OutputEnable()      (TRISECLR = (1<<6))
+#define YellowLED_InputEnable()       (TRISESET = (1<<6))
+#define YellowLED_Get()               ((PORTE >> 6) & 0x1)
+#define YellowLED_PIN                  GPIO_PIN_RE6
+
+/*** Macros for RedRGBLED pin ***/
+#define RedRGBLED_Set()               (LATBSET = (1<<5))
+#define RedRGBLED_Clear()             (LATBCLR = (1<<5))
+#define RedRGBLED_Toggle()            (LATBINV= (1<<5))
+#define RedRGBLED_OutputEnable()      (TRISBCLR = (1<<5))
+#define RedRGBLED_InputEnable()       (TRISBSET = (1<<5))
+#define RedRGBLED_Get()               ((PORTB >> 5) & 0x1)
+#define RedRGBLED_PIN                  GPIO_PIN_RB5
+
+/*** Macros for GreenRGBLED pin ***/
+#define GreenRGBLED_Set()               (LATBSET = (1<<1))
+#define GreenRGBLED_Clear()             (LATBCLR = (1<<1))
+#define GreenRGBLED_Toggle()            (LATBINV= (1<<1))
+#define GreenRGBLED_OutputEnable()      (TRISBCLR = (1<<1))
+#define GreenRGBLED_InputEnable()       (TRISBSET = (1<<1))
+#define GreenRGBLED_Get()               ((PORTB >> 1) & 0x1)
+#define GreenRGBLED_PIN                  GPIO_PIN_RB1
+
+/*** Macros for BlueRGBLED pin ***/
+#define BlueRGBLED_Set()               (LATBSET = (1<<0))
+#define BlueRGBLED_Clear()             (LATBCLR = (1<<0))
+#define BlueRGBLED_Toggle()            (LATBINV= (1<<0))
+#define BlueRGBLED_OutputEnable()      (TRISBCLR = (1<<0))
+#define BlueRGBLED_InputEnable()       (TRISBSET = (1<<0))
+#define BlueRGBLED_Get()               ((PORTB >> 0) & 0x1)
+#define BlueRGBLED_PIN                  GPIO_PIN_RB0
+
+/*** Macros for RedLED pin ***/
+#define RedLED_Set()               (LATESET = (1<<3))
+#define RedLED_Clear()             (LATECLR = (1<<3))
+#define RedLED_Toggle()            (LATEINV= (1<<3))
+#define RedLED_OutputEnable()      (TRISECLR = (1<<3))
+#define RedLED_InputEnable()       (TRISESET = (1<<3))
+#define RedLED_Get()               ((PORTE >> 3) & 0x1)
+#define RedLED_PIN                  GPIO_PIN_RE3
+
+/*** Macros for GreenLED pin ***/
+#define GreenLED_Set()               (LATESET = (1<<4))
+#define GreenLED_Clear()             (LATECLR = (1<<4))
+#define GreenLED_Toggle()            (LATEINV= (1<<4))
+#define GreenLED_OutputEnable()      (TRISECLR = (1<<4))
+#define GreenLED_InputEnable()       (TRISESET = (1<<4))
+#define GreenLED_Get()               ((PORTE >> 4) & 0x1)
+#define GreenLED_PIN                  GPIO_PIN_RE4
+
 
 // *****************************************************************************
 /* GPIO Port

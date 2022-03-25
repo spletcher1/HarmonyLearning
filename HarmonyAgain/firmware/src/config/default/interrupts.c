@@ -49,6 +49,7 @@
 // *****************************************************************************
 // *****************************************************************************
 
+#include "configuration.h"
 #include "interrupts.h"
 #include "definitions.h"
 
@@ -60,27 +61,54 @@
 // *****************************************************************************
 
 
+void CORE_TIMER_InterruptHandler( void );
+void TIMER_3_InterruptHandler( void );
 void UART1_FAULT_InterruptHandler( void );
-void DMA0_InterruptHandler( void );
-void DMA1_InterruptHandler( void );
+void I2C1_BUS_InterruptHandler( void );
+void I2C1_MASTER_InterruptHandler( void );
+void DRV_USBHS_InterruptHandler( void );
+void DRV_USBHS_DMAInterruptHandler( void );
 
 
 
 /* All the handlers are defined here.  Each will call its PLIB-specific function. */
-void __ISR(_UART1_FAULT_VECTOR, ipl5SRS) UART1_FAULT_Handler (void)
+void CORE_TIMER_Handler (void)
+{
+    CORE_TIMER_InterruptHandler();
+}
+
+
+
+void TIMER_3_Handler (void)
+{
+    TIMER_3_InterruptHandler();
+}
+
+void UART1_FAULT_Handler (void)
 {
     UART1_FAULT_InterruptHandler();
 }
 
-void __ISR(_DMA0_VECTOR, ipl3SRS) DMA0_Handler (void)
+void I2C1_BUS_Handler (void)
 {
-    DMA0_InterruptHandler();
+    I2C1_BUS_InterruptHandler();
 }
 
-void __ISR(_DMA1_VECTOR, ipl3SRS) DMA1_Handler (void)
+void I2C1_MASTER_Handler (void)
 {
-    DMA1_InterruptHandler();
+    I2C1_MASTER_InterruptHandler();
 }
+
+void USB_Handler (void)
+{
+    DRV_USBHS_InterruptHandler();
+}
+
+void USB_DMA_Handler (void)
+{
+    DRV_USBHS_DMAInterruptHandler();
+}
+
 
 
 

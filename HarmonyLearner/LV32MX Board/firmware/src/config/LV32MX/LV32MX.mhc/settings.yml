@@ -1,0 +1,13 @@
+configName: LV32MX
+folderName: ''
+format_version: v1.0
+frameworkPath: ../../../HarmonyFramework
+processor: PIC32MZ0512EFE064
+projectName: ''
+settings:
+  PackageFilter: bsp;core;core_apps_pic32mx;core_apps_pic32mz_da;core_apps_pic32mz_ef;core_apps_pic32mz_w1;crypto;csp;csp_apps_pic32mx;csp_apps_pic32mz_da;csp_apps_pic32mz_ef;csp_apps_pic32mz_w1;net;quick_docs;usb;wireless;
+  FORCE_OPTIMIZATION: 'false'
+  GENERATE_BACKUP: 'true'
+  CMSISPath: .\dev_packs\arm\CMSIS\5.7.0
+  MERGE_STRATEGY: USER_ALL
+  DFPPath: .\dev_packs\Microchip\PIC32MZ-EF_DFP\1.3.57\atdf\PIC32MZ0512EFE064.atdf

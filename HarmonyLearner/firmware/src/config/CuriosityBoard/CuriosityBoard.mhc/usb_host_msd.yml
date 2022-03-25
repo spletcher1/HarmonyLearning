@@ -1,0 +1,6 @@
+format_version: v1.0
+type: UniqueComponent
+attributes: {id: usb_host_msd}
+children:
+- type: ElementPosition
+  attributes: {x: '988', y: '181', id: usb_host_msd}

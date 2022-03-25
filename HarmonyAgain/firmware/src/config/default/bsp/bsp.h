@@ -60,7 +60,9 @@
 // Section: BSP Macros
 // *****************************************************************************
 // *****************************************************************************
-
+/*** VBUS Macros for VBUS_AH ***/
+#define VBUS_AH_PowerEnable() (LATGSET = (1<<13))
+#define VBUS_AH_PowerDisable() (LATGCLR = (1<<13))
 
 
 
